@@ -8,7 +8,7 @@ public class HelloAgain {
 
     @GetMapping
     public String simpleOne(){
-        return "Welcome to Jenkins";
+        return "Welcome to Jenkins, Dude";
     }
 
 
