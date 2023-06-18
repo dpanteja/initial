@@ -1,0 +1,17 @@
+version: 0.2
+
+env:
+  parameter-store:
+    LOGIN_PASSWORD: /CodeBuild/dockerLogin
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+     
+artifacts:
+    files: imagedefinitions.json
